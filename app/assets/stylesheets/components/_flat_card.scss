@@ -1,0 +1,36 @@
+.flat-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 36px;
+}
+
+.flat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 350px;
+  width: 350px;
+  background-color: $light-gray;
+}
+
+.flat-card-content {
+  padding: 20px;
+}
+
+.flat-card-numbers {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.flat-card-bottom {
+  display: flex;
+  align-item: center;
+  height: 70px;
+  padding: 20px;
+  background-color: $white;
+  border-top: 1px solid #e5e5e5;
+}
+
+.flat-card-bottom > a {
+  margin-right: 20px;
+}
