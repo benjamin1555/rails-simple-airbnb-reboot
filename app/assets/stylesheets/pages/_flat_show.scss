@@ -1,0 +1,31 @@
+.main-img {
+  height: 350px;
+  background-position: center;
+  background-size: cover;
+}
+
+#background-overflow {
+  margin-top: -100px;
+}
+
+.details-card-header, .details-card-info, .rental-card-calendar, .rental-card-numbers,
+.rental-card-social {
+  background-color: $light-gray;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.rental-card-social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rental-card-social h6 {
+  margin: 0;
+}
+
+.rental-card-social i {
+  font-size: 2rem;
+  margin: 0 5px;
+}

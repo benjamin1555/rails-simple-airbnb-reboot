@@ -8,13 +8,18 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 350px;
+  height: 400px;
   width: 350px;
   background-color: $light-gray;
 }
 
+.flat-card img {
+  height: 140px;
+  object-fit: cover;
+}
+
 .flat-card-content {
-  padding: 20px;
+  padding: 10px 20px;
 }
 
 .flat-card-numbers {
@@ -25,7 +30,7 @@
 .flat-card-bottom {
   display: flex;
   align-item: center;
-  height: 70px;
+  height: 65px;
   padding: 20px;
   background-color: $white;
   border-top: 1px solid #e5e5e5;

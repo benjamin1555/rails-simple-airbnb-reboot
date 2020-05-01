@@ -1,1 +1,63 @@
-<h1><%= @flat.name %></h1>
+<div class="main-img" style="background-image: url(<%= @flat.flat_picture %>)">
+</div>
+
+<div class="container p-4" id="background-overflow">
+  <div class="row">
+    <div class="col-8">
+      <div class="details-card">
+        <div class="details-card-header shadow-sm">
+          <h1><%= @flat.name %></h1>
+          <p><%= @flat.address %></p>
+        </div>
+
+        <div class="details-card-info shadow-sm">
+          <h3>A bit more about this flat...</h3>
+          <span style="white-space: pre-line"><%= @flat.description %></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-4">
+      <div class="rental-card">
+        <div class="rental-card-calendar shadow-sm">
+          <h5>Book this place!</h5>
+          <form>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">From:</span>
+              </div>
+              <input type="text" class="form-control" placeholder="dd/mm/yyyy" aria-label="rental-start-date" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">To:</span>
+              </div>
+              <input type="text" class="form-control" placeholder="dd/mm/yyyy" aria-label="rental-end-date" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success w-100">Book</button>
+          </form>
+        </div>
+
+        <div class="rental-card-numbers shadow-sm">
+          <h3>Details</h3>
+          <div class="flat-card-numbers">
+            <i class="fas fa-user-friends mr-1"></i>
+            <%= @flat.number_of_guests %>
+            <i class="fas fa-euro-sign ml-4 mr-1"></i>
+            <%= @flat.price_per_night %>
+          </div>
+        </div>
+
+        <div class="rental-card-social shadow-sm">
+          <h6>Share</h6>
+          <div class="social-icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-pinterest-square"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

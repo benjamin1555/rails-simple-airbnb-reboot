@@ -3,13 +3,19 @@ Flat.destroy_all
 
 puts "Filling DB..."
 
-8.times do
+9.times do
+  flat_paragraph = ""
+  Faker::Lorem.paragraphs(number: 6, supplemental: true).each do |paragraph|
+    flat_paragraph += "#{paragraph} \n\n"
+  end
+
   flat = Flat.create!(
     name: Faker::Movies::HarryPotter.location,
     address: Faker::Address.full_address,
-    description: Faker::Lorem.paragraphs(number: 2),
-    price_per_night: rand(30..250),
-    number_of_guests: rand(2..10)
+    description: flat_paragraph,
+    price_per_night: rand(1..250),
+    number_of_guests: rand(1..5),
+    flat_picture: Faker::LoremFlickr.image(size: "1799x900", search_terms: ['appartment'])
   )
   puts "Created flat id.#{flat.id}"
 end
